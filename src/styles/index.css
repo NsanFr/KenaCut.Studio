@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+  body {
+    background-color: #0B0D17;
+    color: #F8FAFC;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Antigravity Aurora Background Mesh */
+.aurora-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: radial-gradient(circle at 15% 15%, rgba(140, 114, 255, 0.15), transparent 45%),
+              radial-gradient(circle at 85% 20%, rgba(112, 185, 254, 0.15), transparent 40%),
+              radial-gradient(circle at 50% 60%, rgba(255, 169, 159, 0.08), transparent 50%),
+              radial-gradient(circle at 80% 85%, rgba(243, 255, 170, 0.08), transparent 40%),
+              #0B0D17;
+}
+
+/* Glow effects */
+.glow-primary {
+  box-shadow: 0 0 35px -5px rgba(140, 114, 255, 0.45);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 35px -5px rgba(112, 185, 254, 0.45);
+}
+
+.glow-flare {
+  box-shadow: 0 0 35px -5px rgba(255, 169, 159, 0.4);
+}
+
+.glow-lemon {
+  box-shadow: 0 0 35px -5px rgba(243, 255, 170, 0.35);
+}
+
+/* Glassmorphic Surfaces */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-4px);
+}
+
+.glass-card-interactive {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* Text Gradients */
+.text-gradient-aurora {
+  background: linear-gradient(135deg, #F8FAFC 0%, #8C72FF 45%, #70B9FE 80%, #FFA99F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFE29F 0%, #FFAE34 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #70B9FE 0%, #2DD4BF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Timeline Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0D17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 114, 255, 0.5);
+}
+
+/* Grid Pattern Overlay */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
