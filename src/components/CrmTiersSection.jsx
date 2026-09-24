@@ -50,10 +50,10 @@ export default function CrmTiersSection({ onOpenOrderModal }) {
             <Crown className="w-3.5 h-3.5" />
             <span>Gamified CRM Loyalty System</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black dark:text-white text-slate-900 tracking-tight">
             Makin Sering Order, <span className="text-gradient-aurora">Makin Prioritas</span>
           </h2>
-          <p className="text-sm sm:text-base text-slate-300">
+          <p className="text-sm sm:text-base dark:text-slate-300 text-slate-600">
             Sistem kartu member eksklusif KenaCut Studio. Setiap repeat order mengumpulkan poin loyalitas untuk membuka antrean kilat, diskon retainer hingga 15%, dan dedicated editor pribadi.
           </p>
         </div>
@@ -68,14 +68,14 @@ export default function CrmTiersSection({ onOpenOrderModal }) {
                 onClick={() => setSelectedTierId(tier.id)}
                 className={`px-4 sm:px-6 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-2.5 ${
                   isSelected
-                    ? 'bg-white text-slate-950 shadow-xl shadow-white/20 scale-105 border-2 border-white'
-                    : 'bg-white/[0.05] text-slate-300 hover:text-white hover:bg-white/10 border border-white/10'
+                    ? 'dark:bg-white dark:text-slate-950 bg-slate-900 text-white shadow-xl dark:shadow-white/20 shadow-slate-900/20 scale-105 border-2 dark:border-white border-slate-900'
+                    : 'dark:bg-white/[0.05] bg-slate-900/[0.05] dark:text-slate-300 text-slate-700 hover:text-slate-950 dark:hover:text-white dark:hover:bg-white/10 hover:bg-slate-900/[0.08] dark:border-white/10 border-slate-300'
                 }`}
               >
                 <Award className={`w-4 h-4 ${isSelected ? 'text-[#8C72FF]' : 'text-slate-400'}`} />
                 <span>{tier.name}</span>
                 <span className={`text-[10px] px-2 py-0.5 rounded-full ${
-                  isSelected ? 'bg-slate-900 text-white' : 'bg-white/10 text-slate-300'
+                  isSelected ? 'dark:bg-slate-900 dark:text-white bg-slate-800 text-slate-100' : 'dark:bg-white/10 bg-slate-200 dark:text-slate-300 text-slate-700'
                 }`}>
                   {tier.orderThreshold}
                 </span>

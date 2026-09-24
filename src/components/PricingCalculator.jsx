@@ -52,15 +52,15 @@ Mohon info ketersediaan slot antrean.`;
             <Calculator className="w-3.5 h-3.5" />
             <span>Kalkulator Transparan</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black dark:text-white text-slate-900 tracking-tight">
             Hitung Estimasi <span className="text-gradient-aurora">Project Video Kamu</span>
           </h2>
-          <p className="text-sm sm:text-base text-slate-300">
+          <p className="text-sm sm:text-base dark:text-slate-300 text-slate-600">
             Tanpa biaya tersembunyi. Sesuaikan jumlah konten, kecepatan pengerjaan, dan add-on kebutuhan media sosial Anda.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto glass-panel rounded-3xl p-6 sm:p-10 border border-white/20 shadow-2xl">
+        <div className="max-w-4xl mx-auto glass-panel rounded-3xl p-6 sm:p-10 border dark:border-white/20 border-slate-300 shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
             
             {/* Options Column */}
@@ -68,7 +68,7 @@ Mohon info ketersediaan slot antrean.`;
               
               {/* Format selection */}
               <div className="space-y-2">
-                <label className="text-xs font-bold text-slate-300 uppercase tracking-wider">
+                <label className="text-xs font-bold dark:text-slate-300 text-slate-700 uppercase tracking-wider">
                   1. Pilih Format Konten
                 </label>
                 <div className="grid grid-cols-3 gap-2">
@@ -83,12 +83,12 @@ Mohon info ketersediaan slot antrean.`;
                       onClick={() => setFormat(f.id)}
                       className={`p-3 rounded-xl border text-left transition-all ${
                         format === f.id
-                          ? 'bg-[#8C72FF]/20 border-[#8C72FF] text-white shadow-md'
-                          : 'bg-white/5 border-white/10 text-slate-300 hover:bg-white/10'
+                          ? 'bg-[#8C72FF]/20 border-[#8C72FF] dark:text-white text-[#8C72FF] shadow-md font-bold'
+                          : 'dark:bg-white/5 bg-slate-100 dark:border-white/10 border-slate-300 dark:text-slate-300 text-slate-700 dark:hover:bg-white/10 hover:bg-slate-200'
                       }`}
                     >
                       <div className="text-xs font-bold">{f.name}</div>
-                      <div className="text-[10px] text-slate-400">{f.tag}</div>
+                      <div className="text-[10px] dark:text-slate-400 text-slate-500">{f.tag}</div>
                     </button>
                   ))}
                 </div>
@@ -97,7 +97,7 @@ Mohon info ketersediaan slot antrean.`;
               {/* Video Count Slider */}
               <div className="space-y-2">
                 <div className="flex justify-between items-center text-xs">
-                  <label className="font-bold text-slate-300 uppercase tracking-wider">
+                  <label className="font-bold dark:text-slate-300 text-slate-700 uppercase tracking-wider">
                     2. Jumlah Konten:
                   </label>
                   <span className="font-extrabold text-[#70B9FE] text-sm">{videoCount} Video</span>
@@ -108,9 +108,9 @@ Mohon info ketersediaan slot antrean.`;
                   max="30" 
                   value={videoCount}
                   onChange={(e) => setVideoCount(parseInt(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-[#8C72FF]"
+                  className="w-full h-2 dark:bg-slate-800 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#8C72FF]"
                 />
-                <div className="flex justify-between text-[10px] text-slate-400">
+                <div className="flex justify-between text-[10px] dark:text-slate-400 text-slate-500">
                   <span>1 Video (Satuan)</span>
                   <span>10 Video (Hemat 5%)</span>
                   <span>25+ Video (Hemat 15%)</span>

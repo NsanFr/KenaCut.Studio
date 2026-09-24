@@ -25,10 +25,10 @@ export default function PortfolioSection({ onSelectItem }) {
             <Sparkles className="w-3.5 h-3.5" />
             <span>Showcase Portofolio Riil</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black dark:text-white text-slate-900 tracking-tight">
             Karya Autentik, <span className="text-gradient-aurora">Non-AI Slop</span>
           </h2>
-          <p className="text-sm sm:text-base text-slate-300">
+          <p className="text-sm sm:text-base dark:text-slate-300 text-slate-600">
             Setiap detik dipahat manual oleh editor berpengalaman dengan manipulasi pacing, sound design presisi, dan hook visual yang menahan jari penonton agar tidak swipe away.
           </p>
         </div>
@@ -42,7 +42,7 @@ export default function PortfolioSection({ onSelectItem }) {
               className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-2 ${
                 activeFilter === cat
                   ? 'bg-gradient-to-r from-[#8C72FF] to-[#70B9FE] text-white shadow-lg shadow-[#8C72FF]/30 scale-105'
-                  : 'bg-white/[0.05] text-slate-300 hover:text-white hover:bg-white/[0.1] border border-white/10'
+                  : 'dark:bg-white/[0.05] bg-slate-900/[0.05] dark:text-slate-300 text-slate-700 hover:text-slate-950 dark:hover:text-white dark:hover:bg-white/[0.1] hover:bg-slate-900/[0.08] dark:border-white/10 border-slate-300'
               }`}
             >
               <span>{cat}</span>
@@ -117,7 +117,7 @@ export default function PortfolioSection({ onSelectItem }) {
 
               {/* Card Meta & Details */}
               <div className="space-y-3">
-                <div className="flex items-center justify-between text-xs text-slate-400">
+                <div className="flex items-center justify-between text-xs dark:text-slate-400 text-slate-500">
                   <span>{item.client}</span>
                   <span className="text-[#70B9FE] font-bold flex items-center gap-1">
                     <TrendingUp className="w-3.5 h-3.5" />
@@ -125,14 +125,14 @@ export default function PortfolioSection({ onSelectItem }) {
                   </span>
                 </div>
 
-                <h3 className="text-base font-bold text-white group-hover:text-[#70B9FE] transition-colors line-clamp-1">
+                <h3 className="text-base font-bold dark:text-white text-slate-900 group-hover:text-[#8C72FF] dark:group-hover:text-[#70B9FE] transition-colors line-clamp-1">
                   {item.title}
                 </h3>
 
                 {/* Highlights Tags */}
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {item.editingHighlights.slice(0, 2).map((hl, i) => (
-                    <span key={i} className="text-[10px] px-2 py-0.5 rounded-md bg-white/[0.04] border border-white/10 text-slate-300">
+                    <span key={i} className="text-[10px] px-2 py-0.5 rounded-md dark:bg-white/[0.04] bg-slate-900/[0.05] border dark:border-white/10 border-slate-200 dark:text-slate-300 text-slate-600">
                       ⚡ {hl}
                     </span>
                   ))}

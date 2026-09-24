@@ -31,12 +31,12 @@ Mohon dicek dan dikonfirmasi waktu pengerjaannya.`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in">
-      <div className="relative w-full max-w-lg rounded-3xl bg-[#0B0D17] border border-white/20 p-6 sm:p-8 shadow-2xl space-y-6">
+      <div className="relative w-full max-w-lg rounded-3xl dark:bg-[#0B0D17] bg-white border dark:border-white/20 border-slate-300 p-6 sm:p-8 shadow-2xl space-y-6">
         
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full bg-white/10 text-slate-300 hover:text-white hover:bg-white/20 transition-colors"
+          className="absolute top-5 right-5 p-2 rounded-full dark:bg-white/10 bg-slate-100 dark:text-slate-300 text-slate-600 hover:text-slate-900 dark:hover:text-white dark:hover:bg-white/20 hover:bg-slate-200 transition-colors"
         >
           <X className="w-4 h-4" />
         </button>
@@ -47,25 +47,25 @@ Mohon dicek dan dikonfirmasi waktu pengerjaannya.`;
             <UploadCloud className="w-6 h-6" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-white">Jalur Kilat Setor Raw File</h3>
-            <p className="text-xs text-slate-400">Khusus klien & kreator KenaCut Studio</p>
+            <h3 className="text-xl font-bold dark:text-white text-slate-900">Jalur Kilat Setor Raw File</h3>
+            <p className="text-xs dark:text-slate-400 text-slate-500">Khusus klien & kreator KenaCut Studio</p>
           </div>
         </div>
 
         {isSubmitted ? (
           <div className="py-8 text-center space-y-3">
-            <div className="w-14 h-14 mx-auto rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+            <div className="w-14 h-14 mx-auto rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h4 className="text-lg font-bold text-white">Bahan Mentah Terkirim!</h4>
-            <p className="text-xs text-slate-300 max-w-xs mx-auto">
+            <h4 className="text-lg font-bold dark:text-white text-slate-900">Bahan Mentah Terkirim!</h4>
+            <p className="text-xs dark:text-slate-300 text-slate-600 max-w-xs mx-auto">
               Tim editor KenaCut akan segera memeriksa file & briefing di Google Drive Anda.
             </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold dark:text-slate-300 text-slate-700 uppercase tracking-wider mb-1.5">
                 Nama Kamu / Nama Brand *
               </label>
               <input
@@ -74,12 +74,12 @@ Mohon dicek dan dikonfirmasi waktu pengerjaannya.`;
                 placeholder="Contoh: Amanda (Brand Skincare)"
                 value={clientName}
                 onChange={(e) => setClientName(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-[#8C72FF]"
+                className="w-full px-4 py-3 rounded-xl dark:bg-white/5 bg-slate-50 border dark:border-white/15 border-slate-300 dark:text-white text-slate-900 text-xs placeholder:text-slate-400 focus:outline-none focus:border-[#8C72FF]"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold dark:text-slate-300 text-slate-700 uppercase tracking-wider mb-1.5">
                 Link Google Drive / Dropbox *
               </label>
               <div className="relative">
@@ -90,17 +90,17 @@ Mohon dicek dan dikonfirmasi waktu pengerjaannya.`;
                   placeholder="https://drive.google.com/drive/folders/..."
                   value={driveLink}
                   onChange={(e) => setDriveLink(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-[#70B9FE]"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl dark:bg-white/5 bg-slate-50 border dark:border-white/15 border-slate-300 dark:text-white text-slate-900 text-xs placeholder:text-slate-400 focus:outline-none focus:border-[#70B9FE]"
                 />
               </div>
-              <p className="text-[10px] text-slate-400 mt-1">
+              <p className="text-[10px] dark:text-slate-400 text-slate-500 mt-1">
                 Pastikan akses link diatur ke "Anyone with the link can view / editor".
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-bold dark:text-slate-300 text-slate-700 uppercase tracking-wider mb-1.5">
                   Tier Member (Opsional)
                 </label>
                 <input
@@ -108,18 +108,18 @@ Mohon dicek dan dikonfirmasi waktu pengerjaannya.`;
                   placeholder="Bronze / Gold / Platinum"
                   value={tierCode}
                   onChange={(e) => setTierCode(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-[#FFA99F]"
+                  className="w-full px-4 py-3 rounded-xl dark:bg-white/5 bg-slate-50 border dark:border-white/15 border-slate-300 dark:text-white text-slate-900 text-xs placeholder:text-slate-400 focus:outline-none focus:border-[#FFA99F]"
                 />
               </div>
               <div className="flex flex-col justify-end">
-                <div className="text-[10px] text-emerald-400 bg-emerald-950/30 p-2.5 rounded-xl border border-emerald-500/30 font-medium">
+                <div className="text-[10px] text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 p-2.5 rounded-xl border border-emerald-300 dark:border-emerald-500/30 font-medium">
                   ✓ Member Gold ke atas langsung masuk antrean 24 jam.
                 </div>
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-bold dark:text-slate-300 text-slate-700 uppercase tracking-wider mb-1.5">
                 Instruksi Singkat / Referensi Hook
               </label>
               <textarea
@@ -127,7 +127,7 @@ Mohon dicek dan dikonfirmasi waktu pengerjaannya.`;
                 placeholder="Misal: Buat hook cepat di detik ke-2, tambahkan subtitle karaoke neon dan SFX whoosh."
                 value={briefNotes}
                 onChange={(e) => setBriefNotes(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-[#8C72FF]"
+                className="w-full px-4 py-3 rounded-xl dark:bg-white/5 bg-slate-50 border dark:border-white/15 border-slate-300 dark:text-white text-slate-900 text-xs placeholder:text-slate-400 focus:outline-none focus:border-[#8C72FF]"
               ></textarea>
             </div>
 

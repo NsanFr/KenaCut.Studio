@@ -16,10 +16,10 @@ export default function PipelineSection({ onOpenDriveModal }) {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#70B9FE]/15 border border-[#70B9FE]/30 text-[#70B9FE] text-xs font-bold uppercase tracking-wider">
             <span>Workflow Pipeline Transparan</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black dark:text-white text-slate-900 tracking-tight">
             Dari Bahan Mentah Menjadi <span className="text-gradient-aurora">Konten Viral</span>
           </h2>
-          <p className="text-sm sm:text-base text-slate-300">
+          <p className="text-sm sm:text-base dark:text-slate-300 text-slate-600">
             Alur kerja 4 tahap tanpa ribet. Anda fokus menciptakan ide & merekam, KenaCut Studio yang menyulapnya menjadi mahakarya siap upload.
           </p>
         </div>
@@ -39,8 +39,8 @@ export default function PipelineSection({ onOpenDriveModal }) {
                   onClick={() => setActiveStep(idx)}
                   className={`cursor-pointer p-5 rounded-2xl border transition-all duration-300 ${
                     isSelected
-                      ? 'bg-gradient-to-r from-white/[0.08] to-white/[0.02] border-[#8C72FF] shadow-xl shadow-[#8C72FF]/20 -translate-x-1'
-                      : 'bg-white/[0.02] border-white/10 hover:bg-white/[0.05] hover:border-white/20'
+                      ? 'dark:bg-gradient-to-r dark:from-white/[0.08] dark:to-white/[0.02] bg-white border-[#8C72FF] shadow-xl shadow-[#8C72FF]/20 -translate-x-1'
+                      : 'dark:bg-white/[0.02] bg-slate-900/[0.02] dark:border-white/10 border-slate-200 dark:hover:bg-white/[0.05] hover:bg-slate-900/[0.05] dark:hover:border-white/20 hover:border-slate-300'
                   }`}
                 >
                   <div className="flex items-start gap-4">
@@ -71,11 +71,11 @@ export default function PipelineSection({ onOpenDriveModal }) {
                         )}
                       </div>
 
-                      <h3 className={`text-base sm:text-lg font-bold ${isSelected ? 'text-white' : 'text-slate-200'}`}>
+                      <h3 className={`text-base sm:text-lg font-bold ${isSelected ? 'dark:text-white text-slate-900' : 'dark:text-slate-200 text-slate-700'}`}>
                         {step.title}
                       </h3>
 
-                      <p className="text-xs sm:text-sm text-slate-400">
+                      <p className="text-xs sm:text-sm dark:text-slate-400 text-slate-600">
                         {step.shortDesc}
                       </p>
 

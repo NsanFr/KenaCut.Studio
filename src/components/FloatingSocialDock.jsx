@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MessageCircle, Video, Instagram, UploadCloud, Scissors, Sparkles } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
+import ThemeToggle from './ThemeToggle';
 
 export default function FloatingSocialDock({ onOpenDriveModal, onOpenOrderModal }) {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -12,7 +13,7 @@ export default function FloatingSocialDock({ onOpenDriveModal, onOpenOrderModal 
       sublabel: `${SITE_CONFIG.phoneNumber} • Fast Quote`,
       icon: MessageCircle,
       href: SITE_CONFIG.getWhatsAppUrl("Halo KenaCut Studio, mau tanya jasa editing video"),
-      color: 'hover:text-emerald-400 hover:bg-emerald-500/20 hover:border-emerald-500/40',
+      color: 'hover:text-emerald-500 hover:bg-emerald-500/20 hover:border-emerald-500/40',
       badge: 'Online'
     },
     {
@@ -45,18 +46,18 @@ export default function FloatingSocialDock({ onOpenDriveModal, onOpenOrderModal 
   ];
 
   return (
-    <aside aria-label="Social hub" className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 px-3 py-2 rounded-full bg-[#0B0D17]/85 backdrop-blur-2xl border border-white/20 shadow-2xl shadow-black/80 flex items-center gap-1.5 sm:gap-2">
+    <aside aria-label="Social hub" className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 px-3 py-2 rounded-full dark:bg-[#0B0D17]/85 bg-white/90 backdrop-blur-2xl border dark:border-white/20 border-slate-300 shadow-2xl dark:shadow-black/80 shadow-slate-900/15 flex items-center gap-1.5 sm:gap-2">
       
       {/* Brand Mini Monogram */}
       <button 
         onClick={onOpenOrderModal}
-        className="relative group p-2 rounded-full bg-gradient-to-r from-[#8C72FF] to-[#70B9FE] text-white flex items-center justify-center hover:scale-110 active:scale-95 transition-transform"
+        className="relative group p-2 rounded-full bg-gradient-to-r from-[#8C72FF] to-[#70B9FE] text-white flex items-center justify-center hover:scale-110 active:scale-95 transition-transform shadow-md"
         title="KenaCut Studio Quick Order"
       >
         <Scissors className="w-4 h-4 text-slate-950" />
       </button>
 
-      <div className="h-6 w-px bg-white/20 mx-1"></div>
+      <div className="h-6 w-px dark:bg-white/20 bg-slate-300 mx-1"></div>
 
       {/* Dock Action Icons */}
       {dockItems.map((item) => {
@@ -68,11 +69,11 @@ export default function FloatingSocialDock({ onOpenDriveModal, onOpenOrderModal 
             
             {/* Tooltip Label ala iOS Dynamic Island */}
             {isHovered && (
-              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1.5 rounded-xl bg-slate-900/95 border border-white/20 text-white backdrop-blur-md shadow-xl text-center pointer-events-none whitespace-nowrap animate-fade-in z-50">
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1.5 rounded-xl dark:bg-slate-900/95 bg-white/95 border dark:border-white/20 border-slate-300 dark:text-white text-slate-900 backdrop-blur-md shadow-xl text-center pointer-events-none whitespace-nowrap animate-fade-in z-50">
                 <div className="text-[11px] font-bold">{item.label}</div>
-                <div className="text-[9px] text-slate-400">{item.sublabel}</div>
+                <div className="text-[9px] dark:text-slate-400 text-slate-500">{item.sublabel}</div>
                 {/* Arrow */}
-                <div className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-900 rotate-45 border-r border-b border-white/20 -mt-1"></div>
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 dark:bg-slate-900 bg-white rotate-45 border-r border-b dark:border-white/20 border-slate-300 -mt-1"></div>
               </div>
             )}
 
@@ -83,7 +84,7 @@ export default function FloatingSocialDock({ onOpenDriveModal, onOpenOrderModal 
                 rel="noopener noreferrer"
                 onMouseEnter={() => setHoveredItem(item.id)}
                 onMouseLeave={() => setHoveredItem(null)}
-                className={`p-2.5 sm:p-3 rounded-full text-slate-300 border border-transparent transition-all flex items-center justify-center ${item.color} active:scale-90`}
+                className={`p-2.5 sm:p-3 rounded-full dark:text-slate-300 text-slate-600 border border-transparent transition-all flex items-center justify-center ${item.color} active:scale-90`}
                 aria-label={item.label}
               >
                 <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -94,7 +95,7 @@ export default function FloatingSocialDock({ onOpenDriveModal, onOpenOrderModal 
                 onClick={item.action}
                 onMouseEnter={() => setHoveredItem(item.id)}
                 onMouseLeave={() => setHoveredItem(null)}
-                className={`p-2.5 sm:p-3 rounded-full text-slate-300 border border-transparent transition-all flex items-center justify-center ${item.color} active:scale-90`}
+                className={`p-2.5 sm:p-3 rounded-full dark:text-slate-300 text-slate-600 border border-transparent transition-all flex items-center justify-center ${item.color} active:scale-90`}
                 aria-label={item.label}
               >
                 <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -104,6 +105,11 @@ export default function FloatingSocialDock({ onOpenDriveModal, onOpenOrderModal 
           </div>
         );
       })}
+
+      <div className="h-6 w-px dark:bg-white/20 bg-slate-300 mx-1"></div>
+
+      {/* Quick Theme Switcher on Dock */}
+      <ThemeToggle variant="dock" />
 
     </aside>
   );

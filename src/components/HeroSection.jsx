@@ -33,12 +33,12 @@ export default function HeroSection({ onOpenOrderModal }) {
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
             
             {/* Live Badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/[0.06] border border-white/15 backdrop-blur-xl shadow-inner">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full dark:bg-white/[0.06] bg-slate-900/[0.05] border dark:border-white/15 border-slate-300 backdrop-blur-xl shadow-inner">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8C72FF] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#8C72FF]"></span>
               </span>
-              <span className="text-xs font-semibold tracking-wide text-slate-200">
+              <span className="text-xs font-semibold tracking-wide dark:text-slate-200 text-slate-700">
                 KenaCut Studio • Next-Gen Post-Production
               </span>
               <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold uppercase rounded-md bg-[#FFA99F]/20 text-[#FFA99F]">
@@ -47,7 +47,7 @@ export default function HeroSection({ onOpenOrderModal }) {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-white">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] dark:text-white text-slate-900">
               Potong Bagian Bosan,{' '}
               <span className="text-gradient-aurora block sm:inline">
                 Sisakan yang Menawan.
@@ -55,7 +55,7 @@ export default function HeroSection({ onOpenOrderModal }) {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg dark:text-slate-300 text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Transformasi footage mentah jadi konten video vertikal 15–60 detik dengan pacing dinamis, hook ramah algoritma, dan sound design kelas agensi.
             </p>
 
@@ -72,7 +72,7 @@ export default function HeroSection({ onOpenOrderModal }) {
 
               <a
                 href="#pipeline"
-                className="w-full sm:w-auto px-7 py-4 rounded-full font-semibold text-sm text-slate-200 hover:text-white bg-white/[0.06] hover:bg-white/[0.12] border border-white/20 backdrop-blur-xl transition-all flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-4 rounded-full font-semibold text-sm dark:text-slate-200 text-slate-700 hover:text-slate-950 dark:hover:text-white dark:bg-white/[0.06] bg-slate-900/[0.06] hover:bg-slate-900/[0.1] dark:hover:bg-white/[0.12] border dark:border-white/20 border-slate-300 backdrop-blur-xl transition-all flex items-center justify-center gap-2 shadow-sm"
               >
                 <span>Lihat Alur Kerja</span>
                 <div className="w-2 h-2 rounded-full bg-[#70B9FE] animate-pulse"></div>
@@ -80,7 +80,7 @@ export default function HeroSection({ onOpenOrderModal }) {
             </div>
 
             {/* Micro Feature Bullet Points */}
-            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-xs text-slate-300">
+            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-xs dark:text-slate-300 text-slate-600">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#70B9FE]" />
                 <span>Format Siap TikTok / Reels</span>
@@ -99,39 +99,39 @@ export default function HeroSection({ onOpenOrderModal }) {
             <div className="pt-6 grid grid-cols-3 gap-3 sm:gap-4 max-w-xl mx-auto lg:mx-0">
               
               {/* Card A */}
-              <div className="glass-panel p-3.5 sm:p-4 rounded-2xl border border-white/15 animate-float-slow hover:border-[#8C72FF]/50 transition-colors group">
+              <div className="glass-panel p-3.5 sm:p-4 rounded-2xl animate-float-slow hover:border-[#8C72FF]/50 transition-colors group">
                 <div className="flex items-center gap-2 text-[#8C72FF] mb-1">
                   <Users className="w-4 h-4" />
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Portofolio</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider dark:text-slate-400 text-slate-500">Portofolio</span>
                 </div>
-                <div className="text-xl sm:text-2xl font-black text-white group-hover:text-[#8C72FF] transition-colors">
+                <div className="text-xl sm:text-2xl font-black dark:text-white text-slate-900 group-hover:text-[#8C72FF] transition-colors">
                   85+
                 </div>
-                <div className="text-[11px] text-slate-300 font-medium">Klien Aktif</div>
+                <div className="text-[11px] dark:text-slate-300 text-slate-600 font-medium">Klien Aktif</div>
               </div>
 
               {/* Card B */}
-              <div className="glass-panel p-3.5 sm:p-4 rounded-2xl border border-white/15 animate-float-reverse hover:border-[#70B9FE]/50 transition-colors group">
+              <div className="glass-panel p-3.5 sm:p-4 rounded-2xl animate-float-reverse hover:border-[#70B9FE]/50 transition-colors group">
                 <div className="flex items-center gap-2 text-[#70B9FE] mb-1">
                   <Clock className="w-4 h-4" />
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">SLA Kilat</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider dark:text-slate-400 text-slate-500">SLA Kilat</span>
                 </div>
-                <div className="text-xl sm:text-2xl font-black text-white group-hover:text-[#70B9FE] transition-colors">
+                <div className="text-xl sm:text-2xl font-black dark:text-white text-slate-900 group-hover:text-[#70B9FE] transition-colors">
                   24 Jam
                 </div>
-                <div className="text-[11px] text-slate-300 font-medium">Render Cepat</div>
+                <div className="text-[11px] dark:text-slate-300 text-slate-600 font-medium">Render Cepat</div>
               </div>
 
               {/* Card C */}
-              <div className="glass-panel p-3.5 sm:p-4 rounded-2xl border border-white/15 animate-float-slow hover:border-[#FFA99F]/50 transition-colors group">
+              <div className="glass-panel p-3.5 sm:p-4 rounded-2xl animate-float-slow hover:border-[#FFA99F]/50 transition-colors group">
                 <div className="flex items-center gap-2 text-[#FFA99F] mb-1">
                   <Star className="w-4 h-4 fill-[#FFA99F]" />
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Rating</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider dark:text-slate-400 text-slate-500">Rating</span>
                 </div>
-                <div className="text-xl sm:text-2xl font-black text-white group-hover:text-[#FFA99F] transition-colors">
+                <div className="text-xl sm:text-2xl font-black dark:text-white text-slate-900 group-hover:text-[#FFA99F] transition-colors">
                   4.9/5.0
                 </div>
-                <div className="text-[11px] text-slate-300 font-medium">Client Rating</div>
+                <div className="text-[11px] dark:text-slate-300 text-slate-600 font-medium">Client Rating</div>
               </div>
 
             </div>

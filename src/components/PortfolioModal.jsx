@@ -6,12 +6,12 @@ export default function PortfolioModal({ item, onClose, onOpenOrderModal }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in">
-      <div className="relative w-full max-w-2xl rounded-3xl bg-[#0B0D17] border border-white/20 p-6 sm:p-8 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
+      <div className="relative w-full max-w-2xl rounded-3xl dark:bg-[#0B0D17] bg-white border dark:border-white/20 border-slate-300 p-6 sm:p-8 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
         
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full bg-white/10 text-slate-300 hover:text-white hover:bg-white/20 transition-colors"
+          className="absolute top-5 right-5 p-2 rounded-full dark:bg-white/10 bg-slate-100 dark:text-slate-300 text-slate-600 hover:text-slate-900 dark:hover:text-white dark:hover:bg-white/20 hover:bg-slate-200 transition-colors"
         >
           <X className="w-4 h-4" />
         </button>
@@ -22,13 +22,13 @@ export default function PortfolioModal({ item, onClose, onOpenOrderModal }) {
             <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#8C72FF]/20 text-[#8C72FF] border border-[#8C72FF]/30">
               {item.category}
             </span>
-            <span className="text-xs text-slate-400">{item.client}</span>
+            <span className="text-xs dark:text-slate-400 text-slate-500">{item.client}</span>
           </div>
-          <h3 className="text-xl sm:text-2xl font-black text-white">{item.title}</h3>
+          <h3 className="text-xl sm:text-2xl font-black dark:text-white text-slate-900">{item.title}</h3>
         </div>
 
         {/* Video Canvas & Timeline Preview */}
-        <div className="relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-slate-900 to-black border border-white/15 p-5 flex flex-col justify-between">
+        <div className="relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-slate-900 to-black border dark:border-white/15 border-slate-300 p-5 flex flex-col justify-between">
           <div className={`absolute inset-0 bg-gradient-to-tr ${item.videoPlaceholderBg} opacity-80`}></div>
           
           <div className="relative z-10 flex items-center justify-between text-xs">
@@ -54,12 +54,12 @@ export default function PortfolioModal({ item, onClose, onOpenOrderModal }) {
 
         {/* Multi-Track Editing Blueprint */}
         <div className="space-y-3">
-          <h4 className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+          <h4 className="text-xs font-bold dark:text-slate-300 text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
             <Layers className="w-3.5 h-3.5 text-[#8C72FF]" />
             <span>Bedah Pipeline Timeline Editing (CapCut & Premiere Pro)</span>
           </h4>
 
-          <div className="space-y-2 bg-black/50 p-4 rounded-xl border border-white/10">
+          <div className="space-y-2 dark:bg-black/50 bg-slate-900 p-4 rounded-xl border dark:border-white/10 border-slate-700">
             {item.timelineLayers.map((layer, idx) => (
               <div key={idx} className="space-y-1">
                 <div className="flex justify-between text-[11px] text-slate-300 font-medium">
@@ -76,12 +76,12 @@ export default function PortfolioModal({ item, onClose, onOpenOrderModal }) {
 
         {/* Editing Highlights Recipe */}
         <div className="space-y-2">
-          <h4 className="text-xs font-bold text-slate-300 uppercase tracking-wider">
+          <h4 className="text-xs font-bold dark:text-slate-300 text-slate-700 uppercase tracking-wider">
             Resep Editing KenaCut:
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {item.editingHighlights.map((hl, i) => (
-              <div key={i} className="flex items-center gap-2 p-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-xs text-slate-200">
+              <div key={i} className="flex items-center gap-2 p-2.5 rounded-xl dark:bg-white/[0.03] bg-slate-50 border dark:border-white/10 border-slate-200 text-xs dark:text-slate-200 text-slate-700">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#70B9FE] shrink-0" />
                 <span>{hl}</span>
               </div>
